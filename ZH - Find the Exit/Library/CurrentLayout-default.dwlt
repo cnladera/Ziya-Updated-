@@ -219,7 +219,7 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -645,7 +645,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\CodeNinja\My project (9)
+  m_LastProjectPath: C:\Users\CodeNinja\GitHub\Ziya-Updated-\ZH - Find the Exit
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
