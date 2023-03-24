@@ -6,7 +6,11 @@ public class Jump : MonoBehaviour
 {
     Rigidbody rigidbody;
 
-    float jumpForce = 5.7f;
+    float jumpForce = 15f;
+
+    public bool isGrounded;
+
+    float fallMultiplier = 1.5f;
 
     void Start()
     {
@@ -15,8 +19,17 @@ public class Jump : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("Jump")){
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, .15f);
+        Debug.DrawRay(transform.position, Vector3.down * .15f, Color.red);
+
+        if(Input.GetButtonDown("Jump") && isGrounded){
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+            if(rigidbody.velocity.y < 0)
+            {
+                rigidbody.velocity += Physics.gravity * fallMultiplier * Time.deltaTime;
+            }
+
         }
     }
 }
